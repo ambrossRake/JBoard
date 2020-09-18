@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0">
+  <stylesheets>
+    <URL value="@../css/TaskModal.css"/>
+  </stylesheets>
+  <top>
+    <VBox id="top-container">
+      <TextField text="Task Title" fx:id="taskTitleView"/>
+    </VBox>
+  </top>
+  <center>
+    <TextArea promptText="Enter task description here" fx:id="taskDescriptionView"/>
+  </center>
+</BorderPane>

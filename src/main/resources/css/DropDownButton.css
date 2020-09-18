@@ -1,0 +1,9 @@
+.dropDownButton{
+    -fx-background-image: url("../images/drop-down-arrow.png");
+    -fx-background-size: 12px 12px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-min-width:12;
+    -fx-min-height:12;
+    -fx-background-color: transparent;
+}

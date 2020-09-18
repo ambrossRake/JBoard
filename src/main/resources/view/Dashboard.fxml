@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import com.github.ambrossrake.controller.DropDownButtonController?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.github.ambrossrake.controller.DashboardController">
+
+  <stylesheets>
+    <URL value="@../css/Dashboard.css" />
+  </stylesheets>
+
+  <top>
+    <VBox id="top-container">
+      <Label fx:id="welcomeMessage" styleClass="h1" text="Welcome back"/>
+      <Label fx:id="updateMessage" id="" styleClass="h5" text="Last updated..."/>
+    </VBox>
+  </top>
+
+  <center>
+    <!-- Main container -->
+    <GridPane>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+
+      <VBox id="task-container" GridPane.rowIndex="0" GridPane.columnIndex="0">
+        <HBox>
+          <Label styleClass="h4">To do</Label>
+          <fx:include source="DropDownButton.fxml" fx:id="toDoDropDown" />
+          <Button text="Add task" onMouseClicked="#addTask"/>
+        </HBox>
+        <VBox fx:id="toDoTaskView" styleClass="taskView"/>
+        <HBox>
+          <Label styleClass="h4">In Progress</Label>
+          <fx:include source="DropDownButton.fxml"/>
+        </HBox>
+        <VBox fx:id="inProgressTaskView" styleClass="taskView"/>
+        <HBox>
+          <Label styleClass="h4">Completed</Label>
+          <fx:include source="DropDownButton.fxml"/>
+        </HBox>
+        <VBox fx:id="completeTaskView" styleClass="taskView"/>
+      </VBox>
+
+      <VBox GridPane.rowIndex="0" GridPane.columnIndex="1">
+        <Label text="Emails"/>
+      </VBox>
+    </GridPane>
+  </center>
+
+</BorderPane>
+

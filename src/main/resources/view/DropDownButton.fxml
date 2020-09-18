@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<?import java.net.URL?>
+
+<Button xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.github.ambrossrake.controller.DropDownButtonController"
+        onMouseClicked="#toggleDropDown" fx:id="dropDownButton" styleClass="dropDownButton">
+  <stylesheets>
+    <URL value="@../css/DropDownButton.css" />
+  </stylesheets>
+</Button>

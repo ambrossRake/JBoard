@@ -1,0 +1,15 @@
+#top-container{
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-width: 1;
+    -fx-border-color: #cccccc;
+}
+
+.text-field{
+    -fx-text-box-border: transparent;
+    -fx-font-size: 32px;
+}
+
+.text-field:focused{
+    -fx-faint-focus-color: transparent;
+    -fx-focus-color: transparent;
+}
